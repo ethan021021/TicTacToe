@@ -1,14 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="16A304a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tic_Tac_Toe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +17,105 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="board" translatesAutoresizingMaskIntoConstraints="NO" id="ah7-ep-mTZ">
+                                <frame key="frameInset" minX="16" minY="146" width="343" height="373"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="277-Mj-RJi">
+                                <frame key="frameInset" minX="137" minY="282" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="o"/>
+                                <connections>
+                                    <action selector="gameBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gkh-di-rl2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o1k-3f-gpH">
+                                <frame key="frameInset" minX="16" minY="282" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="o"/>
+                                <connections>
+                                    <action selector="gameBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kvl-B1-8bw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fK7-c6-L5l">
+                                <frame key="frameInset" minX="16" minY="146" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="o"/>
+                                <connections>
+                                    <action selector="gameBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fBs-v8-04Z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2kz-6M-R0g">
+                                <frame key="frameInset" minX="137" minY="146" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="o"/>
+                                <connections>
+                                    <action selector="gameBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QKN-f8-BAM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yfp-2d-jJ1">
+                                <frame key="frameInset" minX="259" minY="146" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="o"/>
+                                <connections>
+                                    <action selector="gameBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3xP-FY-M16"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="woD-2H-au1">
+                                <frame key="frameInset" minX="259" minY="419" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="o"/>
+                                <connections>
+                                    <action selector="gameBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gsa-Lz-a2y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xXa-DV-LWD">
+                                <frame key="frameInset" minX="137" minY="419" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="o"/>
+                                <connections>
+                                    <action selector="gameBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sb0-9x-tb4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rTx-vB-z7j">
+                                <frame key="frameInset" minX="259" minY="282" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="o"/>
+                                <connections>
+                                    <action selector="gameBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lpn-qZ-L88"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ro8-n8-JQO">
+                                <frame key="frameInset" minX="16" minY="419" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="o"/>
+                                <connections>
+                                    <action selector="gameBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oix-w1-b6M"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outletCollection property="gameBtns" destination="fK7-c6-L5l" collectionClass="NSMutableArray" id="hj2-Oo-0np"/>
+                        <outletCollection property="gameBtns" destination="2kz-6M-R0g" collectionClass="NSMutableArray" id="K6A-jO-SWs"/>
+                        <outletCollection property="gameBtns" destination="Yfp-2d-jJ1" collectionClass="NSMutableArray" id="Utv-ZV-nZp"/>
+                        <outletCollection property="gameBtns" destination="o1k-3f-gpH" collectionClass="NSMutableArray" id="2ks-2x-ciH"/>
+                        <outletCollection property="gameBtns" destination="277-Mj-RJi" collectionClass="NSMutableArray" id="b2T-EZ-q8Q"/>
+                        <outletCollection property="gameBtns" destination="rTx-vB-z7j" collectionClass="NSMutableArray" id="ffr-2Z-9C2"/>
+                        <outletCollection property="gameBtns" destination="ro8-n8-JQO" collectionClass="NSMutableArray" id="Ve5-Ec-678"/>
+                        <outletCollection property="gameBtns" destination="xXa-DV-LWD" collectionClass="NSMutableArray" id="Evm-bp-CkG"/>
+                        <outletCollection property="gameBtns" destination="woD-2H-au1" collectionClass="NSMutableArray" id="Nya-86-gvM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="board" width="360" height="360"/>
+        <image name="o" width="169" height="162"/>
+    </resources>
 </document>
